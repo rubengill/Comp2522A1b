@@ -1,7 +1,9 @@
 /**
+ * Creates two different types of tables, multiplication and addition
+ *
  * @author rgill
  * @version 1.0
  */
-public class TableType {
-
+public enum TableType {
+    ADD, MULT;
 }
