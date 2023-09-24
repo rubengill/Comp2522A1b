@@ -1,5 +1,5 @@
 /**
- * Populate the 2D array by using multiplication to corectly display values using
+ * Populate the 2D array by using multiplication to correctly display values using
  * numbers entered by the user
  *
  * @author rgill
