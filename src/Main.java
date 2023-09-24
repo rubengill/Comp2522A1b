@@ -29,11 +29,14 @@ public final class Main {
             usage();
         }
 
+        //Get the array type, and store the TableType in variable "type"
         type = getType(argv[0]);
         start = getNumber(argv[1]);
         stop = getNumber(argv[2]);
         table = getTable(type, start, stop);
         //YOUR CODE TO DISPLAY TABLE – HINT 1 LINE OF CODE!
+
+
 
     }
 
@@ -84,13 +87,27 @@ public final class Main {
         return (val);
     }
 
-    public static Table getTable(final TableType type,
-                                 final int width,
-                                 final int height) {
+    /**
+     * Table object is instantiated using arguments input from the user
+     * @param type type of operation used
+     * @param width the start (first) number
+     * @param height the stop (second) number
+     * @return the Table object instantiated
+     */
+    public static Table getTable(final TableType type, final int width, final int height) {
 
+        // Create reference outside of if loop, so it can be returned
+        Table newTable;
 
+        // Determine which function to use based on the type
+        if (type == TableType.ADD) {
+             newTable = new AdditionTable(width, height);
+        } else {
+             newTable = new MultiplicationTable(width, height);
+        }
 
-        return
+        // Return the Table object so we can call display
+        return newTable;
     }
 
 
