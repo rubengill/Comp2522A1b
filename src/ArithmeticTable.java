@@ -124,7 +124,7 @@ public class ArithmeticTable {
                 break;
 
             case ADD:
-                // Calcuate the size of the array using the start and end values given by the user
+                // Calculate the size of the array using the start and end values given by the user
                 this.start = begin;
                 size = finish - start + 1;
                 this.values = new float[size][size];

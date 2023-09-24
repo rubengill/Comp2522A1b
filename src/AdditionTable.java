@@ -27,10 +27,8 @@ public class AdditionTable extends Table {
      * Use the stop(begin) and start values set in the superclass to calculate the values
      * of the 2D array.
      *
-     * Maybe we do not need parameters since the values already set in the
-     *
-//     * @param start the start value
-//     * @param stop the end value
+     * @param start the start value
+     * @param stop the end value
      */
     @Override
     public void table(int start, int stop) {
@@ -41,7 +39,7 @@ public class AdditionTable extends Table {
         // Iterate through the array
         for (int i = 0; i < tableArray.length; ++i) {
             for (int j = 0; j < tableArray.length; j++) {
-                // Multiply values
+                // Add values
                 this.tableArray[i][j] = (float) (i + this.start + j + this.start);
 
             }

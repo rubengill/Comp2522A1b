@@ -1,6 +1,6 @@
 /**
- * Populate the 2D array by using addition to add the numbers between the start
- * and stop values that the user entered
+ * Populate the 2D array by using multiplication to corectly display values using
+ * numbers entered by the user
  *
  * @author rgill
  * @version 1.0
@@ -24,6 +24,9 @@ public class MultiplicationTable extends Table {
 
     /**
      * Uses multiplication to calculate the array values
+     *
+     * @param start the first number
+     * @param stop  the second number
      */
     @Override
     public void table(int start, int stop) {
@@ -40,6 +43,4 @@ public class MultiplicationTable extends Table {
             }
         }
     }
-
-
 }

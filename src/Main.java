@@ -15,9 +15,9 @@ public final class Main {
      * The entry point to the program.
      *
      * @param argv the command line args.
-     * argv[0] - the type (+ or *)
-     * argv[1] - the start value (> 1 && < 100)
-     * argv[2] - the end value (> 1 && < 100)
+     *             argv[0] - the type (+ or *)
+     *             argv[1] - the start value (> 1 && < 100)
+     *             argv[2] - the end value (> 1 && < 100)
      */
     public static void main(final String[] argv) {
         final TableType type;
@@ -33,9 +33,11 @@ public final class Main {
         type = getType(argv[0]);
         start = getNumber(argv[1]);
         stop = getNumber(argv[2]);
-        table = getTable(type, start, stop);
-        //YOUR CODE TO DISPLAY TABLE – HINT 1 LINE OF CODE!
 
+        table = getTable(type, start, stop);
+
+        //YOUR CODE TO DISPLAY TABLE – HINT 1 LINE OF CODE!
+        table.display();
 
 
     }
@@ -89,8 +91,9 @@ public final class Main {
 
     /**
      * Table object is instantiated using arguments input from the user
-     * @param type type of operation used
-     * @param width the start (first) number
+     *
+     * @param type   type of operation used
+     * @param width  the start (first) number
      * @param height the stop (second) number
      * @return the Table object instantiated
      */
@@ -101,9 +104,11 @@ public final class Main {
 
         // Determine which function to use based on the type
         if (type == TableType.ADD) {
-             newTable = new AdditionTable(width, height);
+            newTable = new AdditionTable(width, height);
+            newTable.table(width, height);
         } else {
-             newTable = new MultiplicationTable(width, height);
+            newTable = new MultiplicationTable(width, height);
+            newTable.table(width, height);
         }
 
         // Return the Table object so we can call display
