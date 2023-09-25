@@ -38,8 +38,6 @@ public final class Main {
 
         //YOUR CODE TO DISPLAY TABLE – HINT 1 LINE OF CODE!
         table.display();
-
-
     }
 
     /**
@@ -50,11 +48,13 @@ public final class Main {
      * @return the appropriate TableType
      */
     public static TableType getType(final String str) {
+        String cleanedStr = str.replaceAll("'", "");
+
         final TableType type;
 
-        if (str.equals("+")) {
+        if (cleanedStr.equals("+")) {
             type = TableType.ADD;
-        } else if (str.equals("*")) {
+        } else if (cleanedStr.equals("*")) {
             type = TableType.MULT;
         } else {
             usage();
@@ -121,7 +121,7 @@ public final class Main {
      */
     public static void usage() {
         System.err.println("Usage: Main <type> <start> <stop>");
-        System.err.println("\tWhere <type> is one of +, \"*\"");
+        System.err.println("\tWhere <type> is one of +, '*'");
         System.err.println("\tand <start> is between 1 and 100");
         System.err.println("\tand <stop> is between 1 and 100");
         System.err.println("\tand start < stop");
